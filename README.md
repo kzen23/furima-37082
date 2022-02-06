@@ -22,8 +22,8 @@ has_many :orders
 
 | Column              | Type       | Options                            |
 | ------------------- | -------    | ---------------------------------- |
-| name                | string     | null: false, max_length: 40        |
-| info                | text       | null: false, max_length: 1000      |
+| name                | string     | null: false                        |
+| info                | text       | null: false                        |
 | price               | integer    | null: false, character: half-width |
 | category            | integer    | null: false                        |
 | sales_status        | integer    | null: false                        |
