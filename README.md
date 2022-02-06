@@ -39,10 +39,10 @@ has_one :order
 
 ## ordersテーブル
 
-| Column | Type       | Options                   |
-| ------ | --------------------------|
-| user   | references | null: false, foreign_key: true
-| item   | references | null: false, foreign_key: true
+| Column | Type       | Options                        |
+| ------ | ------------------------------------------- |
+| user   | references | null: false, foreign_key: true |
+| item   | references | null: false, foreign_key: true |
 
 ## Association
 
@@ -53,9 +53,9 @@ has_many   :addresses
 ## Addressesテーブル
 
 | Column              | Type        | Options                                          |
-| ------------------- | -------     | -------------------------------------------------|
+| ------------------- | ----------- | -------------------------------------------------|
 | postal_code         | string      | null: false,                                     |
-| prefecture          | integer     | null: false                                      |
+| prefecture_id       | integer     | null: false                                      |
 | city                | string      | null: false                                      |
 | addresses           | string      | null: false                                      |
 | building_name       | string      |                                                  |
