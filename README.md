@@ -7,10 +7,10 @@
 | nickname            | string  | null: false                        |
 | email               | string  | null: false, unique: true          |
 | encrypted_password  | string  | null: false                        |
-| last_name           | string  | null: false, character: full_width |
-| first_name          | string  | null: false  character: full_width |
-| last_name_kana      | string  | null: false  character: full_width |
-| first_name_kana     | string  | null: false  character: full_width |
+| last_name           | string  | null: false,                       |
+| first_name          | string  | null: false                        |
+| last_name_kana      | string  | null: false                        |
+| first_name_kana     | string  | null: false                        |
 | birth_date          | date    | null: false                        |
 
 ## Association
@@ -24,7 +24,7 @@ has_many :orders
 | ------------------- | -------    | ---------------------------------- |
 | name                | string     | null: false                        |
 | info                | text       | null: false                        |
-| price               | integer    | null: false, character: half-width |
+| price               | integer    | null: false,                       |
 | category            | integer    | null: false                        |
 | sales_status        | integer    | null: false                        |
 | shipping_fee_status | integer    | null: false                        |
@@ -53,12 +53,12 @@ belongs_to :item
 
 | Column              | Type        | Options                                          |
 | ------------------- | -------     | -------------------------------------------------|
-| postal_code         | string      | null: false, character: half-width               |
+| postal_code         | string      | null: false,                                     |
 | prefecture          | integer     | null: false                                      |
 | city                | string      | null: false                                      |
 | addresses           | string      | null: false                                      |
 | building_name       | string      |                                                  |
-| phone_number        | integer     | null: false, character: half-width, unique: true |
+| phone_number        | integer     | null: false,                       unique: true |
 
 ## Association
 
