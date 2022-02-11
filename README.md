@@ -7,7 +7,7 @@
 | nickname            | string  | null: false                        |
 | email               | string  | null: false, unique: true          |
 | encrypted_password  | string  | null: false                        |
-| last_name           | string  | null: false                        |
+| last_name           | string  | null: false,                       |
 | first_name          | string  | null: false                        |
 | last_name_kana      | string  | null: false                        |
 | first_name_kana     | string  | null: false                        |
@@ -24,7 +24,7 @@ has_many :orders
 | ---------------------- | -------    | ---------------------------------- |
 | name                   | string     | null: false                        |
 | info                   | text       | null: false                        |
-| price                  | integer    | null: false                        |
+| price                  | integer    | null: false,                       |
 | category_id            | integer    | null: false                        |
 | sales_status_id        | integer    | null: false                        |
 | shipping_fee_status_id | integer    | null: false                        |
