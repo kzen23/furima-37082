@@ -20,7 +20,7 @@ has_many :orders
 
 ## itemsテーブル
 
-| Column              | Type       | Options                            |
+| Column                 | Type       | Options                            |
 | ---------------------- | -------    | ---------------------------------- |
 | name                   | string     | null: false                        |
 | info                   | text       | null: false                        |
