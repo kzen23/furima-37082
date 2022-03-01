@@ -7,13 +7,12 @@ attr_accessor :postal_code, :prefecture_id, :city, :addresses, :building_name, :
     validates :city
     validates :addresses
     validates :phone_number
-    validates :order_id
     validates :user_id
     validates :item_id
   end
   validates :prefecture_id, numericality: { other_than: 0, message: "can't be blank" }
   validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: 'is invalid.Enter it as follows (e.g. 123-4567)'}
-  validates :phone_number, numericality: { greater_than_or_equal_to: 10, less_than_or_equal_to: 11, message: 'is too short'}
+  validates :phone_number, format: { with: /\A0\d{9,10}\z/, message: 'is too short'}
   validates :phone_number, numericality: { only_integer: true, message: 'is invalid. Input only number'}
 
   def save
