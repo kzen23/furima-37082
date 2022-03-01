@@ -3,6 +3,7 @@ class OrderAddress
 attr_accessor :postal_code, :prefecture_id, :city, :addresses, :building_name, :phone_number, :order_id, :item_id, :user_id, :token
 
   with_options presence: true do
+    validates :token
     validates :postal_code
     validates :city
     validates :addresses
