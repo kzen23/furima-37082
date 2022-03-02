@@ -58,12 +58,12 @@ RSpec.describe OrderAddress, type: :model do
       it 'phone_numberは、10桁以上、11桁以内の番号でないと保存できない(11桁以上)' do
         @order_address.phone_number = '012012345678'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include('Phone number is too short')
+        expect(@order_address.errors.full_messages).to include('Phone number is invalid. Please enter the phone number between 10 and 11 digits')
       end
       it 'phone_numberは、10桁以上、11桁以内の番号でないと保存できない(10桁より小さい)' do
         @order_address.phone_number = '050042839'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include('Phone number is too short')
+        expect(@order_address.errors.full_messages).to include('Phone number is invalid. Please enter the phone number between 10 and 11 digits')
       end
       it 'tokenの値が空だと保存できない' do
         @order_address.token = nil
