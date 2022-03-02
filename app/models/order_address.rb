@@ -14,7 +14,8 @@ class OrderAddress
   end
   validates :prefecture_id, numericality: { other_than: 0, message: "can't be blank" }
   validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/, message: 'is invalid.Enter it as follows (e.g. 123-4567)' }
-  validates :phone_number, format: { with: /\A0\d{9,10}\z/, message: 'is invalid. Please enter the phone number between 10 and 11 digits' }
+  validates :phone_number,
+            format: { with: /\A0\d{9,10}\z/, message: 'is invalid. Please enter the phone number between 10 and 11 digits' }
   validates :phone_number, numericality: { only_integer: true, message: 'is invalid. Input only number' }
 
   def save
